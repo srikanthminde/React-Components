@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var Abc=function (){
+                var [x,setX] = React.useState([
+                {
+                    firstname:'praveen',
+                    lastname:'gubbala',
+                    age:38
+                },
+                {
+                    firstname:'anupama',
+                    lastname:'reddy',
+                    age:28
+                },
+                {
+                    firstname:'priya',
+                    lastname:'kaman',
+                    age:23
+                },
+                {
+                    firstname:'kiran',
+                    lastname:'rao',
+                    age:25
+                },
+                {
+                    firstname:'triveni',
+                    lastname:'manu',
+                    age:29
+                }
+            ])
+            function Xyz(i){
+                x.splice(i,1)
+            setX([...x])
+                 
+            }
+            return  (
+             <div>
+                <table border="2">
+                    <thead>
+                        <th> Firstname</th>
+                        <th> Lastname</th>
+                        <th> Age</th>
+                        <th>Options</th>
+
+                        </thead>
+                
+                {
+                    x.map((b,i)=>{
+                        return <tr>
+                            <td>{b.firstname}</td>
+                            <td>{b.lastname}</td>
+                            <td>{b.age}</td>
+                            <td>{b.options} <button onClick={()=>{Xyz(i)}}>delete</button></td>
+                            </tr>
+                    })
+                    
+                } 
+                </table>
+                </div>  
+            )
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>

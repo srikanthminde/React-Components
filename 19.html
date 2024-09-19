@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                var a=+prompt()
+                return (
+                  <div src={a%2===0? (<img src="https://tse4.mm.bing.net/th?id=OIP.yR7QaK2nuHA26L2Fvf2iyAHaKE&pid=Api&P=0&h=180"/>):(<img src="https://i.pinimg.com/originals/ba/28/fe/ba28fe51a945a0413f87e8e8d3b04748.jpg"/>)}width="300px"></div>
+                )
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>
+

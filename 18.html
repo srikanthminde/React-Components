@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            var Abc=function(){
+                var a=+prompt()
+                return (
+                    <img src={(a%2===0?"https://image.petmd.com/files/styles/863x625/public/CANS_dogsmiling_379727605.jpg?w=1920&q=75":"https://wallpaperaccess.com/full/2234778.jpg")}width="350px"></img> 
+                          
+            )
+            }
+            ReactDOM.render(<Abc/>,document.getElementById("root"))
+        </script>
+    </body>
+</html>
